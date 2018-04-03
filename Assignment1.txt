@@ -1,0 +1,97 @@
+/*
+* Anisha Aggarwal
+* DuckID: anishaa
+* Homework Assignment 1
+*/
+
+Textbook Questions:
+1. What are the two models of inter-process communication? What are the strengths and weaknesses of the two approaches?
+	Message Passing -
+		strengths: messages can be exchanged directly or indirectly between processes, doesn't resort to shared variables
+		weakness: performance overhead because of the additional copies
+	Shared Memory -
+		strengths: 2+ processes can exchange information by reading/writing data in shared area, allows maximum speed and convenience of communication
+		weakness: protection and synconization between shared memory
+
+2. Why is the separation of mechanism and policy desirable?
+	Mechanism is the "how to do", whereas Policy is the "what to do". Seperation of the two is desirable because every system is different, so there will be cases where we want the mechanism to stay the same but the policy to be modified. This allows the system to be changed more easily.
+
+3. Describe the actions taken by a kernel to context-switch between processes?
+	Kernel starts by saving the context of the old process in the Process Control Block (PCB). This is known as a state save. Then it loads the saved context of the new process scheduled to run. This is known as a state restore. The PCB contains the cpu registers, process state (ie. ready, waiting, running) and information about the memory assiciated with the process.
+
+4. What are the benefits and the disadvantages of each of the following? Consider both the system level and the programmer level.
+a. Synchronous and asynchronous communication
+	Synchronous - blocking
+		advantages: waits for sender to send message before continuing process; easy to program, easy to understand code
+		disadvantages: both sender and reciever could end up blocking/waiting
+	Asynchronous - non-blocking
+		advantages: other processes can continue in the background, less or no blocking
+		disadvantages: more complex to write asychronous code
+
+b. Automatic and explicit buffering
+	Automatic Buffering - unbounded capacity
+		advantages: sender never blocks (unless bounded capacity and queue is full)
+		disadvantages: memory could be wasted due to the large amount reserved
+	Explicit Buffering - zero or bounded buffering
+		advantages: queue has specifiedlength, so memory will likely not be wasted
+		disadvantages: sender may need to block until recipient receives message, programming complexity
+
+c. Send by copy and send by reference
+	Send by Copy -
+		advantages: caller's copy of the variable will not get unintentionally modified by callee
+		disadvantages: can't be modified; caller and callee must have their own copy of the variable
+	Send by Reference -
+		advantages: use the same variable (less memory allocated)
+		disadvantages: callee can accidentally modify the variable unitentionally which can affect the caller
+
+d. Fixed-sizes and variable-sized messages
+	Fized-Sized Messages -
+		advantages: system level implementation is straight-forward
+		disadvantages: makes application programming more difficult
+	Variable-Sized Messages -
+		advantages: application programming tasks become simpler
+		disadvantages: more complex system-level implementation 
+
+
+Process Analysis:
+	Test process: sleep 6000&
+	cd /proc/[pid] will allow us to find information on the process being run
+	cat cmdline will show us a complete command line for the process: 
+		sleep6000
+	ls -l exe shows the symbolic link containing the actual pathname of the executed command:
+		lrwxrwxrwx 1 anishaa anishaa 0 Apr 19 21:50 exe -> /bin/sleep*
+	cat stat shows us the status information about the process:
+		9531 (sleep) S 9513 9531 9513 34826 9770 1077936128 116 0 0 0 0 0 0 0 20 0 1 0 980013666 7467008 163 18446744073709551615 4194304 4220276 140730500781312 140730500780904 140563050370880 0 0 0 0 1 0 0 17 2 0 0 0 0 0 6319632 6320692 33021952 140730500787495 140730500787506 140730500787506 140730500788205 0
+	cat status shows a more readable version of stat:
+		Name:	sleep
+		State:	S (sleeping)
+		Tgid:	9531
+		Ngid:	0
+		Pid:	9531
+		PPid:	9513
+		TracerPid:	0
+		Uid:	20722	20722	20722	20722
+		Gid:	20722	20722	20722	20722
+		FDSize:	256
+		Groups:	20722 
+		NStgid:	9531
+		NSpid:	9531
+		NSpgid:	9531
+		NSsid:	9513
+		... (more but not included)
+	cat io will show us the I/O statistics of the process:
+		rchar: 1948
+		wchar: 0
+		syscr: 7
+		syscw: 0
+		read_bytes: 0
+		write_bytes: 0
+		cancelled_write_bytes: 0
+	cat statm shows the memory usage:
+		1823 192 173 7 0 81 0
+
+
+
+
+
+

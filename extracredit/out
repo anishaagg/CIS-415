@@ -1,0 +1,209 @@
+Adding directory './'
+CPATH not defined in environment
+parse_file for 'x.c': 'x' 'c'
+fname x fext c obj x.o
+the_table: len = 1
+'x.o': DEP: Len=1 Elements: x.c 
+WQ: Len=1 Elements: x.c 
+the_table: len = 2
+'x.o': DEP: Len=1 Elements: x.c 
+'x.c': DEP: Len=0
+Worker: Removed 'x.c' from work_queue
+process_file: 'x.c' -----
+Found file 'x.c' in directory './'
+Found INCLUDE: 'f1.h'
+Orig Dep: Len=0
+New Dep: Len=1 Elements: f1.h 
+Adding 'f1.h' to the_table
+the_table: len = 3
+'f1.h': DEP: Len=0
+'x.o': DEP: Len=1 Elements: x.c 
+'x.c': DEP: Len=1 Elements: f1.h 
+WQ: Len=1 Elements: f1.h 
+Found INCLUDE: 'f2.h'
+Orig Dep: Len=1 Elements: f1.h 
+New Dep: Len=2 Elements: f1.h f2.h 
+Adding 'f2.h' to the_table
+the_table: len = 4
+'f1.h': DEP: Len=0
+'f2.h': DEP: Len=0
+'x.o': DEP: Len=1 Elements: x.c 
+'x.c': DEP: Len=2 Elements: f1.h f2.h 
+WQ: Len=2 Elements: f1.h f2.h 
+Found INCLUDE: 'f3.h'
+Orig Dep: Len=2 Elements: f1.h f2.h 
+New Dep: Len=3 Elements: f1.h f2.h f3.h 
+Adding 'f3.h' to the_table
+the_table: len = 5
+'f1.h': DEP: Len=0
+'f2.h': DEP: Len=0
+'f3.h': DEP: Len=0
+'x.o': DEP: Len=1 Elements: x.c 
+'x.c': DEP: Len=3 Elements: f1.h f2.h f3.h 
+WQ: Len=3 Elements: f1.h f2.h f3.h 
+process_file done
+the_table: len = 5
+'f1.h': DEP: Len=0
+'f2.h': DEP: Len=0
+'f3.h': DEP: Len=0
+'x.o': DEP: Len=1 Elements: x.c 
+'x.c': DEP: Len=3 Elements: f1.h f2.h f3.h 
+Worker: Removed 'f1.h' from work_queue
+process_file: 'f1.h' -----
+Found file 'f1.h' in directory './'
+process_file done
+the_table: len = 5
+'f1.h': DEP: Len=0
+'f2.h': DEP: Len=0
+'f3.h': DEP: Len=0
+'x.o': DEP: Len=1 Elements: x.c 
+'x.c': DEP: Len=3 Elements: f1.h f2.h f3.h 
+Worker: Removed 'f2.h' from work_queue
+process_file: 'f2.h' -----
+Found file 'f2.h' in directory './'
+process_file done
+the_table: len = 5
+'f1.h': DEP: Len=0
+'f2.h': DEP: Len=0
+'f3.h': DEP: Len=0
+'x.o': DEP: Len=1 Elements: x.c 
+'x.c': DEP: Len=3 Elements: f1.h f2.h f3.h 
+Worker: Removed 'f3.h' from work_queue
+process_file: 'f3.h' -----
+Found file 'f3.h' in directory './'
+Found INCLUDE: 'f4.h'
+Orig Dep: Len=0
+New Dep: Len=1 Elements: f4.h 
+Adding 'f4.h' to the_table
+the_table: len = 6
+'f1.h': DEP: Len=0
+'f2.h': DEP: Len=0
+'f3.h': DEP: Len=1 Elements: f4.h 
+'f4.h': DEP: Len=0
+'x.o': DEP: Len=1 Elements: x.c 
+'x.c': DEP: Len=3 Elements: f1.h f2.h f3.h 
+WQ: Len=1 Elements: f4.h 
+process_file done
+the_table: len = 6
+'f1.h': DEP: Len=0
+'f2.h': DEP: Len=0
+'f3.h': DEP: Len=1 Elements: f4.h 
+'f4.h': DEP: Len=0
+'x.o': DEP: Len=1 Elements: x.c 
+'x.c': DEP: Len=3 Elements: f1.h f2.h f3.h 
+Worker: Removed 'f4.h' from work_queue
+process_file: 'f4.h' -----
+Found file 'f4.h' in directory './'
+Found INCLUDE: 'abc.h'
+Orig Dep: Len=0
+New Dep: Len=1 Elements: abc.h 
+Adding 'abc.h' to the_table
+the_table: len = 7
+'f1.h': DEP: Len=0
+'f2.h': DEP: Len=0
+'f3.h': DEP: Len=1 Elements: f4.h 
+'f4.h': DEP: Len=1 Elements: abc.h 
+'x.o': DEP: Len=1 Elements: x.c 
+'abc.h': DEP: Len=0
+'x.c': DEP: Len=3 Elements: f1.h f2.h f3.h 
+WQ: Len=1 Elements: abc.h 
+Found INCLUDE: 'def.h'
+Orig Dep: Len=1 Elements: abc.h 
+New Dep: Len=2 Elements: abc.h def.h 
+Adding 'def.h' to the_table
+the_table: len = 8
+'f1.h': DEP: Len=0
+'f2.h': DEP: Len=0
+'def.h': DEP: Len=0
+'f3.h': DEP: Len=1 Elements: f4.h 
+'f4.h': DEP: Len=2 Elements: abc.h def.h 
+'x.o': DEP: Len=1 Elements: x.c 
+'abc.h': DEP: Len=0
+'x.c': DEP: Len=3 Elements: f1.h f2.h f3.h 
+WQ: Len=2 Elements: abc.h def.h 
+Found INCLUDE: 'ghi.h'
+Orig Dep: Len=2 Elements: abc.h def.h 
+New Dep: Len=3 Elements: abc.h def.h ghi.h 
+Adding 'ghi.h' to the_table
+the_table: len = 9
+'ghi.h': DEP: Len=0
+'f1.h': DEP: Len=0
+'f2.h': DEP: Len=0
+'def.h': DEP: Len=0
+'f3.h': DEP: Len=1 Elements: f4.h 
+'f4.h': DEP: Len=3 Elements: abc.h def.h ghi.h 
+'x.o': DEP: Len=1 Elements: x.c 
+'abc.h': DEP: Len=0
+'x.c': DEP: Len=3 Elements: f1.h f2.h f3.h 
+WQ: Len=3 Elements: abc.h def.h ghi.h 
+process_file done
+the_table: len = 9
+'ghi.h': DEP: Len=0
+'f1.h': DEP: Len=0
+'f2.h': DEP: Len=0
+'def.h': DEP: Len=0
+'f3.h': DEP: Len=1 Elements: f4.h 
+'f4.h': DEP: Len=3 Elements: abc.h def.h ghi.h 
+'x.o': DEP: Len=1 Elements: x.c 
+'abc.h': DEP: Len=0
+'x.c': DEP: Len=3 Elements: f1.h f2.h f3.h 
+Worker: Removed 'abc.h' from work_queue
+process_file: 'abc.h' -----
+Did NOT find file 'abc.h'
+process: unexpected file abc.h not found
+the_table: len = 9
+'ghi.h': DEP: Len=0
+'f1.h': DEP: Len=0
+'f2.h': DEP: Len=0
+'def.h': DEP: Len=0
+'f3.h': DEP: Len=1 Elements: f4.h 
+'f4.h': DEP: Len=3 Elements: abc.h def.h ghi.h 
+'x.o': DEP: Len=1 Elements: x.c 
+'abc.h': DEP: Len=0
+'x.c': DEP: Len=3 Elements: f1.h f2.h f3.h 
+Worker: Removed 'def.h' from work_queue
+process_file: 'def.h' -----
+Did NOT find file 'def.h'
+process: unexpected file def.h not found
+the_table: len = 9
+'ghi.h': DEP: Len=0
+'f1.h': DEP: Len=0
+'f2.h': DEP: Len=0
+'def.h': DEP: Len=0
+'f3.h': DEP: Len=1 Elements: f4.h 
+'f4.h': DEP: Len=3 Elements: abc.h def.h ghi.h 
+'x.o': DEP: Len=1 Elements: x.c 
+'abc.h': DEP: Len=0
+'x.c': DEP: Len=3 Elements: f1.h f2.h f3.h 
+Worker: Removed 'ghi.h' from work_queue
+process_file: 'ghi.h' -----
+Did NOT find file 'ghi.h'
+process: unexpected file ghi.h not found
+the_table: len = 9
+'ghi.h': DEP: Len=0
+'f1.h': DEP: Len=0
+'f2.h': DEP: Len=0
+'def.h': DEP: Len=0
+'f3.h': DEP: Len=1 Elements: f4.h 
+'f4.h': DEP: Len=3 Elements: abc.h def.h ghi.h 
+'x.o': DEP: Len=1 Elements: x.c 
+'abc.h': DEP: Len=0
+'x.c': DEP: Len=3 Elements: f1.h f2.h f3.h 
+
+******** PROCESS Done *********
+WQ: Len=0
+-------------------------------
+the_table: len = 9
+'ghi.h': DEP: Len=0
+'f1.h': DEP: Len=0
+'f2.h': DEP: Len=0
+'def.h': DEP: Len=0
+'f3.h': DEP: Len=1 Elements: f4.h 
+'f4.h': DEP: Len=3 Elements: abc.h def.h ghi.h 
+'x.o': DEP: Len=1 Elements: x.c 
+'abc.h': DEP: Len=0
+'x.c': DEP: Len=3 Elements: f1.h f2.h f3.h 
+*******************************
+
+parse_file for 'x.c': 'x' 'c'
+x.o:x.o: x.c f1.h f2.h f3.h f4.h abc.h def.h ghi.h

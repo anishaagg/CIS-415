@@ -1,0 +1,70 @@
+BEGIN:VCALENDAR
+METHOD:REQUEST
+PRODID:Microsoft Exchange Server 2010
+VERSION:2.0
+BEGIN:VTIMEZONE
+TZID:Central America Standard Time
+BEGIN:STANDARD
+DTSTART:16010101T000000
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0600
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:16010101T000000
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0600
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+ORGANIZER;CN="Gomez Jimenez, Sylvia":MAILTO:sylvia.gomez.jimenez@intel.com
+ATTENDEE;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE;CN=Anisha:MAI
+ LTO:anisha.aggarwal@gmail.com
+DESCRIPTION;LANGUAGE=en-US:Hello Anisha\,\n\nI hope you are doing fine.\n\n
+ Please review this meeting and accept it so we can discuss further about y
+ our offer.\n\nIf this is not a good day or time feel free to reschedule at
+  your earliest convenience.\n\nTo join the call please dial +1(916)356-266
+ 3 and choose bridge #5 and enter conference ID 693794174.\n\nIf you have a
+ ny further questions or require further assistance do not hesitate to cont
+ act me at any time.\n\nThank you and best regards\,\n\nSylvia Gomez Jimene
+ z\nGTA | CR Talent Hub Recruiter |\nIntel Corporation.\nBefore printing th
+ is e-mail\, consider your environmental responsibility!\n\n\n\n\n.........
+ ..........................................................................
+ ......................................................\n--> Join Skype Mee
+ ting<https://meet.intel.com/sylvia.gomez.jimenez/Z6DG5L9Q>\n  This is an o
+ nline meeting for Skype for Business\, the professional meetings and commu
+ nications app formerly known as Lync.\nJoin by phone\n+1(916)356-2663 (or 
+ your local bridge access #) Choose bridge 5.<tel:+1(916)356-2663%20(or%20y
+ our%20local%20bridge%20access%20#)%20Choose%20bridge%205.> (Global)       
+         English (United States)\nFind a local number<https://dial.intel.co
+ m>\n\nConference ID: 693794174\n Forgot your dial-in PIN?<https://dial.int
+ el.com> |Help<http://o15.officeredir.microsoft.com/r/rlidLync15?clid=1033&
+ p1=5&p2=2009>\n\n\n
+SUMMARY;LANGUAGE=en-US:Offer proposal / For ANISHA AGGARWAL (Prior Worker) 
+ - JR0024929 External Risk Management Intern (CA00237541)
+DTSTART;TZID=Central America Standard Time:20170518T133000
+DTEND;TZID=Central America Standard Time:20170518T140000
+UID:040000008200E00074C5B7101A82E008000000004092C8B0C4CFD201000000000000000
+ 01000000087BE90D63808534AAD545931D40C6FC3
+CLASS:PUBLIC
+PRIORITY:5
+DTSTAMP:20170518T165123Z
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+SEQUENCE:0
+LOCATION;LANGUAGE=en-US:To join the call please dial +1(916)356-2663 and ch
+ oose bridge #5 and enter conference ID 693794174.
+X-MICROSOFT-CDO-APPT-SEQUENCE:0
+X-MICROSOFT-CDO-OWNERAPPTID:695359457
+X-MICROSOFT-CDO-BUSYSTATUS:TENTATIVE
+X-MICROSOFT-CDO-INTENDEDSTATUS:BUSY
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-CDO-IMPORTANCE:1
+X-MICROSOFT-CDO-INSTTYPE:0
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:REMINDER
+TRIGGER;RELATED=START:-PT15M
+END:VALARM
+END:VEVENT
+END:VCALENDAR

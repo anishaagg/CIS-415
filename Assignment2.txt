@@ -1,0 +1,37 @@
+//Anisha Aggarwal	CIS415	Assignment 2
+
+1. OSC 4.14
+   a) I would create a single thread for input and a single thread for output because blocking will occur, so there is no benefit to creating more than a single thread for each. 
+
+   b) I would create 4 threads because there should be as many threads as there are processors available.
+
+2. OSC 4.18
+   a) If the number of kernel threads is less than the number of processors, then some of processors 
+
+   b) If the number of kernel threads is equal to the number of processors, then 
+
+   c) If the number of kernel threads is greater than the number of processors but less than the number of user-level threads, then 
+
+3. I/O bound jobs cause blocking and take little processor time therefore is favored over CPU bound jobs because they take a large amount processor time. Because I/O bound jobs will constantly use the processor and will prohibit CPU bound jobs to occur.
+
+4. OSC 6.11
+   a) CPU utilization is increased if context switching overhead is minimized. Infrequent context switches decreases the overhead. This will allow for an increase in response time for process
+
+   b) Average turnaround time is minimized by executing the shortest tasks first (SJF). This is cause the longest running time tasks to wait and therefore there is an increase in wait time for those tasks
+
+   c) CPU utilization is maximized by running long running CPU bound tasks without context switching. I/O device utilization is maximized by scheduling I/O bound jobs when they are ready to run which increases overhead in context switching.
+
+5. Real-time Scheduling
+periodic tasks: T1 = (0, 4, 1), T2 = (0, 8, 2), T3 = (0, 20, 2)
+   a) Relative Priorities: T1 > T2 > T3
+   		Time 	Ready to Run 	Scheduled
+   		 0 		
+
+   b) (i)
+
+      (ii)
+
+
+
+
+
